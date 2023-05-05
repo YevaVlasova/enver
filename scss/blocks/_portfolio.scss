@@ -1,0 +1,30 @@
+.portfolio {
+  margin-bottom: 16.8rem;
+
+  &__title {
+    @include text($ff, 800, 5.8rem, 7.9rem, $white);
+    margin-bottom: 7rem;
+  }
+
+  &__item {
+    background: $bgSwiper;
+    border-radius: 1.4rem;
+    padding: 2.4rem;
+  }
+}
+.owl-item.active {
+  &:first-child {
+    transform: translateY(0);
+  }
+  &:nth-child(2n) {
+    transform: translateY(5.8rem);
+  }
+  &:nth-child(3n) {
+    transform: translateY(11.6rem);
+  }
+}
+.owl-carousel .owl-stage-outer {
+  overflow-x: hidden;
+  overflow-y: initial;
+  height: 41.7rem;
+}

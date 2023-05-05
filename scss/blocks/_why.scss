@@ -1,0 +1,30 @@
+.why {
+    margin-bottom: 15rem;
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+        margin-bottom: 5rem;
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        @include text($ff-second, 700, 6rem, 7rem, $white);
+        max-width: 58.8rem;
+    }
+
+    &__desc {
+        @include text($ff, 400, 2.1rem, 3.9rem, $white07);
+        letter-spacing: -0.656526px;
+        max-width: 58.8rem;
+    }
+
+    &__img {
+        cursor: pointer;
+        img {
+            max-width: 100%;
+        }
+    }
+}

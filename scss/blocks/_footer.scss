@@ -1,0 +1,52 @@
+.footer {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding: 5rem 2rem 10rem;
+    @include tablet {
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .copyright {
+        @include text($ff-second, 400, 1.8rem, 2.8rem, $white07);
+        letter-spacing: -0.500211px;
+    }
+    &__nav {
+        transform: translateX(4rem);
+        flex-grow: 1;
+        @include tablet {
+            transform: translateX(0);
+        }
+    }
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        @include tablet {
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+
+    &__li {
+        &:first-child, &:last-of-type {
+            margin-left: auto;
+            @include tablet {
+                margin-left: 0;
+            }
+        }
+        
+    }
+
+    &__a {
+        @include text($ff, 400, 1.8rem, 2.5rem, $white07);
+        transition: $transition;
+        &:hover {
+            color: $white;
+            font-weight: 600;
+        }
+    }
+}
+

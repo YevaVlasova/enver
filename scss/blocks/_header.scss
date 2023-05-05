@@ -1,0 +1,81 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4rem 2rem;
+	padding-bottom: 2.3rem;
+}
+
+.nav {
+	flex-grow: 1;
+	@include tablet {
+		flex-grow: 0;
+		z-index: 99;
+	}
+	&__ul {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+
+		@include tablet {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			background: $bg;
+			left: 0;
+			top: 0;
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: $transition;
+			transform: translateX(-120%);
+			&._active {
+				transform: translateX(0);
+			}
+			.nav__a {
+				font-size: 2.1rem;
+				line-height: 2.9rem;
+				color: $white;
+			}
+			.icon-close {
+				position: absolute;
+				top: 5rem;
+				right: 2rem;
+			}
+		}
+	}
+
+	.icon-menu,
+	.icon-close {
+		display: none;
+
+		@include tablet {
+			display: inline-block;
+		}
+	}
+	&__li {
+		&:first-child, &:last-of-type {
+			margin-left: auto;
+			@include tablet {
+				margin-left: initial;
+			}
+		}
+		
+	}
+
+	&__a {
+		@include text($ff, 400, 1.8rem, 2.5rem, $white07);
+		transition: $transition;
+		&:hover {
+			color: $white;
+			font-weight: 600;
+		}
+		&._active {
+			@include text($ff, 600, 1.8rem, 2.5rem, $primary);
+			letter-spacing: -0.500211px;
+		}
+	}
+}

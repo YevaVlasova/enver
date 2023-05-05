@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"  href="owl.carousel.css">
+	<link rel="stylesheet"  href="owl.theme.default.css">
+	<link rel="stylesheet" href="style.css">
+
+	<title>Starter</title>
+</head>
+
+<body>
+	<header class="header container">
+		<a href="#" class="header__logo">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+		<nav class="nav">
+			<ul class="nav__ul" id="navUl">
+				<li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
+				<li class="nav__li"><a href="#" class="nav__a">Services</a></li>
+				<li class="nav__li"><a href="#" class="nav__a">Our Project</a></li>
+                <li class="nav__li"><a href="#" class="nav__a">About us</a></li>
+                <li class="nav__li"><a href="#" class="btn _primary">Contact us</a></li>
+				<span class="material-icons icon-close" onclick="navToggle()">close</span>
+			</ul>
+			<span class="material-icons icon-menu" onclick="navToggle()">menu</span>
+		</nav>
+	</header>
+
+    <div class="hero-section container">
+        <div class="hero-section__info">
+            <div class="hero-section__title">Build Your Awesome Platform</div>
+            <div class="hero-section__desc">Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.</div>
+            <div class="hero-section__btn">
+                <a href="#" class="btn _secondary">
+                    <span>Our Services</span>
+                    <img src="img/arrow.svg" alt="Arrow">
+                </a>
+            </div>
+        </div>
+        <div class="hero-section__img">
+            <img src="img/user.png" alt="User">
+        </div>
+    </div>
+
+
+
+
+    <div class="why container">
+        <div class="why__info">
+            <div class="why__title">Why Enver Is The Best Choice?</div>
+            <div class="why__desc">Watch this one minute video so you understand why you should use our services!</div>
+        </div>
+        <a href="#" class="why__img">
+            <img src="img/video.png" alt="Video">
+        </a>
+    </div>
+
+
+
+    <div class="service container">
+        <div class="service__title">The Service We Provide For You</div>
+        <div class="service__list" id="cards">
+            <div class="service-item">
+                <div class="service-item__border"></div>
+                <div class="service-item__content">
+                    <div class="service-item__icon _blue">
+                        <img src="img/code.svg" alt="Icon">
+                    </div>
+                    <div class="service-item__title">Development</div>
+                    <div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-item__border"></div>
+                <div class="service-item__content">
+                    <div class="service-item__icon _red">
+                        <img src="img/layer.svg" alt="Icon">
+                    </div>
+                    <div class="service-item__title">UI/UX Designer</div>
+                    <div class="service-item__desc">We provide UI/UX Design services, and of course with the best quality</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-item__border"></div>
+                <div class="service-item__content">
+                    <div class="service-item__icon _yellow">
+                        <img src="img/yellow.svg" alt="Icon">
+                    </div>
+                    <div class="service-item__title">Graphik Designer</div>
+                    <div class="service-item__desc">We provide Graphic Design services, with the best designers</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-item__border"></div>
+                <div class="service-item__content">
+                    <div class="service-item__icon _yellow">
+                        <img src="img/align-vertically.svg" alt="Icon">
+                    </div>
+                    <div class="service-item__title">Motion Graphik</div>
+                    <div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-item__border"></div>
+                <div class="service-item__content">
+                    <div class="service-item__icon _blue">
+                        <img src="img/camera.svg" alt="Icon">
+                    </div>
+                    <div class="service-item__title">Photography</div>
+                    <div class="service-item__desc">We provide Photography services, and of course with the best quality</div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-item__border"></div>
+                <div class="service-item__content">
+                    <div class="service-item__icon _red">
+                        <img src="img/video-play.svg" alt="Icon">
+                    </div>
+                    <div class="service-item__title">Videography</div>
+                    <div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="portfolio container">
+        <div class="portfolio__title">Our Awesome Portofolio</div>
+		<div class="owl-carousel owl-theme portfolio__list">
+            <div class="portfolio__item">
+                <img src="img/portfolio/item1.png" alt="Portfolio">
+            </div>
+            <div class="portfolio__item">
+                <img src="img/portfolio/item2.png" alt="Portfolio">
+            </div>
+            <div class="portfolio__item">
+                <img src="img/portfolio/item3.png" alt="Portfolio">
+            </div>
+            <div class="portfolio__item">
+                <img src="img/portfolio/item1.png" alt="Portfolio">
+            </div>
+            <div class="portfolio__item">
+                <img src="img/portfolio/item2.png" alt="Portfolio">
+            </div>
+            <div class="portfolio__item">
+                <img src="img/portfolio/item3.png" alt="Portfolio">
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="container contact__container">
+            <div class="contact__text">Contact us for the service you want to use</div>
+            <div class="contact__btn">
+                <a href="#" class="btn _secondary">Contact us</a>
+            </div>
+        </div>
+    </div>
+
+
+	<footer class="container footer">
+        <a href="#" class="header__logo">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+		<nav class="footer__nav">
+			<ul class="footer__ul">
+				<li class="footer__li"><a href="#" class="footer__a">Support</a></li>
+				<li class="footer__li"><a href="#" class="footer__a">Privacy Policy</a></li>
+				<li class="footer__li"><a href="#" class="footer__a">Terms and Conditions</a></li>
+                <li class="footer__li"><span class="copyright">© 2020 Enver, All Rights Reserved</span></li>
+			</ul>
+		</nav>
+    </footer>
+
+
+	<!-- SCRIPT -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

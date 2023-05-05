@@ -1,0 +1,113 @@
+.service {
+
+    &__title {
+        @include text($ff-second, 700, 6rem, 7rem, $white);
+        text-align: center;
+        max-width: 69.5rem;
+        margin-inline: auto;
+        margin-bottom: 5rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(38.4rem, 1fr));
+        gap: 2.4rem;
+        margin-bottom: 15rem;
+    }
+}
+.service-item {
+    background-color: $bg;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &::before,
+    & > &__border {
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 500ms;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &::before {
+        background: radial-gradient(
+            80rem circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%
+        );
+        z-index: 3;
+    }
+
+    & > &__border::before {
+        background: radial-gradient(
+            40rem circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.3),
+            transparent 40%
+        );
+        z-index: 1;
+    }
+
+    & > &__content {
+        background-color: $bg;
+        border-radius: inherit;
+        height: calc(100% - 0.2rem);
+        margin: 0.1rem;
+        position: relative;
+        width: calc(100% - 0.2rem);
+        z-index: 2;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 4.8rem 4.3rem 4.9rem;
+    }
+
+    &__icon {
+        width: 6.9rem;
+        height: 6.9rem;
+        display: flex;
+        margin-inline: auto;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &._blue {
+            background: rgba(84, 84, 212, 0.1);
+        }
+        &._red {
+            background: rgba(240, 64, 55, 0.1);
+        }
+        &._yellow {
+            background: rgba(254, 220, 90, 0.1);
+        }
+    }
+
+    &__title {
+        @include text($ff, 600, 2.8rem, 3.8rem, $white);
+        text-align: center;
+        letter-spacing: -0.750316px;
+    }
+
+    &__desc {
+        @include text($ff, 400, 2rem, 2.8rem, $white07);
+        text-align: center;
+        letter-spacing: -0.500211px;
+        max-width: 29.9rem;
+    }
+}
+
+#cards:hover > .service-item > .service-item__border {
+    opacity: 1;
+}

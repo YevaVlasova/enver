@@ -1,0 +1,47 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15.1rem;
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__info {
+    }
+
+    &__title {
+        @include text($ff-second, 700, 8rem, 8.4rem, $white);
+        margin-bottom: 2.4rem;
+        max-width: 58.2rem;
+        @include tablet {
+            max-width: 100%;
+            margin-top: 6rem;
+        }
+    }
+
+    &__desc {
+        @include text($ff, 400, 2.1rem, 3.9rem, $white07);
+        letter-spacing: -0.656526px;
+        margin-bottom: 5rem;
+        max-width: 53.6rem;
+        @include tablet {
+            max-width: 100%;
+        }
+    }
+
+    &__btn {
+    }
+
+    &__img {
+        flex-shrink: 0;
+        img {
+            transform: translateX(8rem);
+            @include tablet {
+                flex-shrink: 1;
+                max-width: 100%;
+                transform: translateX(0);
+            }
+        }
+    }
+}
