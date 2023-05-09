@@ -64,6 +64,7 @@
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next,
   .owl-carousel button.owl-dot {
+    margin-top: 50px;
     background: none;
     color: inherit;
     border: none;
@@ -147,7 +148,7 @@
 .owl-carousel .owl-video-wrapper {
   position: relative;
   height: 100%;
-  background: #000; }
+  background: rgba(255, 255, 255, 0.2); }
 
 .owl-carousel .owl-video-play-icon {
   position: absolute;

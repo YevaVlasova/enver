@@ -15,9 +15,17 @@
             gap: 5rem;
             padding: 8rem 2.4rem;
         }
+        @include mobile-small {
+            padding: 8rem 2.4rem 8rem 2rem;
+            gap: 5rem;
+        }
     }
     &__text {
         @include text($ff-second, 700, 6rem, 6.6rem, $white);
         max-width: 82.6rem;
+        @include mobile-small {
+            font-size: 3.6rem;
+            line-height: 5.4rem;
+        }
     }
 }

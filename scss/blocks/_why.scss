@@ -1,5 +1,8 @@
 .why {
     margin-bottom: 15rem;
+    @include mobile-small {
+        margin-bottom: 14rem;
+    }
     &__info {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -8,17 +11,30 @@
         @include tablet {
             grid-template-columns: 1fr;
         }
+        @include mobile-small {
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
     }
 
     &__title {
         @include text($ff-second, 700, 6rem, 7rem, $white);
         max-width: 58.8rem;
+        @include mobile-small {
+            font-size: 3.6rem;
+            line-height: 5.4rem;
+        }
     }
 
     &__desc {
         @include text($ff, 400, 2.1rem, 3.9rem, $white07);
         letter-spacing: -0.656526px;
         max-width: 58.8rem;
+        @include mobile-small {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 0;
+        }
     }
 
     &__img {

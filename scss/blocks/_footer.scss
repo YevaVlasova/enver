@@ -8,10 +8,17 @@
         gap: 4rem;
         align-items: center;
     }
+    @include mobile-small {
+        padding: 14rem 5.3rem 5rem;
+        gap: 4rem;
+    }
 
     .copyright {
-        @include text($ff-second, 400, 1.8rem, 2.8rem, $white07);
+        @include text($ff, 400, 1.6rem, 3.8rem, $white07);
         letter-spacing: -0.500211px;
+        @include mobile-small {
+            @include text($ff-second, 400, 1.8rem, 2.8rem, $white);
+        }
     }
     &__nav {
         transform: translateX(4rem);
@@ -46,6 +53,10 @@
         &:hover {
             color: $white;
             font-weight: 600;
+        }
+        @include mobile-small {
+            @include text($ff, 700, 1.8rem, 2.8rem, $white07);
+            text-transform: capitalize;
         }
     }
 }

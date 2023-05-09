@@ -1,9 +1,29 @@
 .portfolio {
   margin-bottom: 16.8rem;
+  @include mobile {
+    padding: 0;
+  }
+  @include mobile-small {
+    margin-bottom: 14rem;
+  }
 
   &__title {
     @include text($ff, 800, 5.8rem, 7.9rem, $white);
     margin-bottom: 7rem;
+    @include mobile {
+      padding: 2rem;
+    }
+    @include mobile-small {
+      @include text($ff-second, 700, 3.6rem, 5.4rem, $white);
+      padding: 0;
+      padding-left: 2.4rem;
+      margin-bottom: 5rem;
+    }
+  }
+  &__list {
+    * {
+      transition: $transition;
+    }
   }
 
   &__item {
@@ -13,18 +33,26 @@
   }
 }
 .owl-item.active {
-  &:first-child {
-    transform: translateY(0);
-  }
-  &:nth-child(2n) {
-    transform: translateY(5.8rem);
-  }
-  &:nth-child(3n) {
-    transform: translateY(11.6rem);
+  @include min-mobile {
+    &:nth-child(3n+3) {
+      transform: translateY(0);
+    }
+    &:nth-child(3n+2) {
+      transform: translateY(5.8rem);
+    }
+    &:nth-child(3n) {
+      transform: translateY(11.6rem);
+    }
   }
 }
 .owl-carousel .owl-stage-outer {
   overflow-x: hidden;
   overflow-y: initial;
   height: 41.7rem;
+  @include tablet {
+    height: auto;
+  }
+  @include mobile {
+    height: unset;
+  }
 }

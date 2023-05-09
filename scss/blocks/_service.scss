@@ -6,6 +6,11 @@
         max-width: 69.5rem;
         margin-inline: auto;
         margin-bottom: 5rem;
+        @include mobile-small {
+            font-size: 3.6rem;
+            line-height: 5.4rem;
+            text-align: start;
+        }
     }
 
     &__list {
@@ -13,6 +18,11 @@
         grid-template-columns: repeat(auto-fill, minmax(38.4rem, 1fr));
         gap: 2.4rem;
         margin-bottom: 15rem;
+        @include mobile-small {
+            gap: 2.4rem;
+            grid-template-columns: 1fr;
+            margin-bottom: 14rem;
+        }
     }
 }
 .service-item {
@@ -73,6 +83,10 @@
         align-items: center;
         gap: 2rem;
         padding: 4.8rem 4.3rem 4.9rem;
+        @include mobile-small {
+            padding: 4.8rem 3.9rem 4.8rem 3.9rem;
+            gap: 2rem;
+        }
     }
 
     &__icon {
@@ -98,6 +112,11 @@
         @include text($ff, 600, 2.8rem, 3.8rem, $white);
         text-align: center;
         letter-spacing: -0.750316px;
+        @include mobile-small {
+            font-size: 24px;
+            line-height: 33px;
+            letter-spacing: -0.750316px;
+        }
     }
 
     &__desc {
@@ -105,6 +124,13 @@
         text-align: center;
         letter-spacing: -0.500211px;
         max-width: 29.9rem;
+
+        @include mobile-small {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            max-width: 24.9rem;
+            letter-spacing: 0;
+        }
     }
 }
 

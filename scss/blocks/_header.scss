@@ -4,6 +4,18 @@
 	align-items: center;
 	padding: 4rem 2rem;
 	padding-bottom: 2.3rem;
+	@include mobile-small {
+		padding: 2.4rem;
+		padding-top: 4rem;
+	}
+	&__logo img {
+		width: 13.2rem;
+		height: 4rem;
+		@include mobile-small {
+			width: 11.5rem;
+			height: 3.4rem;
+		}
+	}
 }
 
 .nav {
@@ -44,11 +56,20 @@
 				position: absolute;
 				top: 5rem;
 				right: 2rem;
+				z-index: 99;
+				@include tablet {
+					top: 4.3rem;
+					right: 1.2rem;
+				}
+				@include mobile-small {
+					top: 4.3rem;
+					right: 1.8rem;
+				}
 			}
 		}
 	}
 
-	.icon-menu,
+	.menu-icon,
 	.icon-close {
 		display: none;
 

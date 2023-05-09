@@ -13,6 +13,9 @@ html {
     @include mobile {
         font-size: 7px;
     }
+    @include mobile-small {
+        font-size: 10px;
+    }
 }
 
 body {
@@ -26,6 +29,9 @@ body {
     padding: 0 2rem;
     max-width: $container;
     margin-inline: auto;
+    @include mobile-small {
+        padding: 0 2.4rem;
+    }
 }
 
 .btn {
@@ -58,8 +64,115 @@ body {
         &:hover {
             background: darken($color: $primary, $amount: 10%);
         }
+        @include mobile-small {
+            border-radius: 0;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            padding: 1.2rem 2rem;
+            gap: 1.4rem;
+        }
+    }
+    &._contact {
+        padding: 1.6rem 4.9rem;
+        background: $primary;
+        border-radius: 0.5rem;
+        @include text($ff, 700, 2.1rem, 2.9rem, $white);
+        text-align: center;
+        transition: $transition;
+        &:hover {
+            background: darken($color: $primary, $amount: 10%);
+        }
+        @include mobile-small {
+            border-radius: 0.4rem;
+            padding: 1.1rem 4.35rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
     }
 }
 .material-icons {
 	cursor: pointer;
+}
+.menu-icon span {
+    z-index: -1;
+    cursor: pointer;
+    display: block;
+    width: 14px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: $white;
+    border-radius: 20px;
+    margin-left: auto;
+    transition: $transition;
+}
+.menu-icon span:first-child {
+    transform-origin: 0 0;
+}
+.menu-icon span:nth-child(even) {
+    width: 10px;
+}
+.menu-icon span:last-child {
+    transform-origin: 0 100%;
+    width: 6px;
+}
+.menu-icon.open span:first-child {
+    transform: rotate(45deg);
+}
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.open span:last-child {
+    transform: rotate(-45deg);
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    @include mobile {
+        width: 3.8rem;
+        height: 3.8rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        &:hover {
+            background: $primary;
+        }
+        &.disabled {
+            background: rgba(255, 255, 255, 0.2) !important;
+        }
+        span {
+            font-size: 1px;
+            position: relative;
+            &::before {
+                content: '\e5cb';
+                font-family: 'Material Icons';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 24px;
+                line-height: 1;
+                letter-spacing: normal;
+                text-transform: none;
+                display: inline-block;
+                white-space: nowrap;
+                word-wrap: normal;
+                direction: ltr;
+                -webkit-font-feature-settings: 'liga';
+                -webkit-font-smoothing: antialiased; 
+            }
+        } 
+    }
+}
+.owl-carousel .owl-nav .owl-next {
+    @include mobile {
+        span {
+            &::before {
+                content: '\e5cc';
+            }
+        }
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
