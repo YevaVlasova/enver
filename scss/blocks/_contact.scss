@@ -1,7 +1,7 @@
 .contact {
     background: rgba(30, 30, 32, 0.5);
     &__container {
-        padding: 18.7rem 0;
+        padding: 18.7rem 2.4rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,11 +21,72 @@
         }
     }
     &__text {
+        position: relative;
         @include text($ff-second, 700, 6rem, 6.6rem, $white);
         max-width: 82.6rem;
         @include mobile-small {
             font-size: 3.6rem;
             line-height: 5.4rem;
+        }
+        & > .contact__zipper {
+            position: absolute;
+            max-width: 9.5rem;
+            left: -4.75rem;
+            top: -32.7rem;
+            @include desktop-small {
+                left: 1.2rem;
+                top: -25rem;
+            }
+            @include tablet {
+                left: 2rem;
+                top: -20rem;
+            }
+            @include mobile-small {
+                max-width: 6.107rem;
+                left: 0.9rem;
+                top: -17.5rem;
+            }
+        }
+        & > .contact__plus {
+            position: absolute;
+            max-width: 4.2rem;
+            right: -40.4rem;
+            top: -11.8rem;
+            @include desktop-small {
+                right: -27rem;
+                top: -9rem;
+            }
+            @include tablet {
+                right: -10rem;
+                top: -7.8rem;
+            }
+            @include tablet-small {
+                right: -5rem;
+                top: -7.3rem;
+            }
+            @include mobile {
+                right: -2rem;
+                top: -7rem;
+            }
+            @include mobile-small {
+                max-width: 2.8rem;
+                right: -0.5rem;
+                top: -6.8rem;
+            }
+        }
+        & > .contact__double {
+            position: absolute;
+            max-width: 5.1rem;
+            left: 3.5rem;
+            bottom: -11.8rem;
+            @include tablet {
+                bottom: -23rem;
+            }
+            @include mobile-small {
+                max-width: 3.937rem;
+                left: -1.5rem;
+                bottom: -16.232rem;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	align-items: center;
     padding: 5rem 2rem 10rem;
-    @include tablet {
+    @include desktop-small {
         flex-direction: column;
         gap: 4rem;
         align-items: center;
@@ -12,18 +12,26 @@
         padding: 14rem 5.3rem 5rem;
         gap: 4rem;
     }
+    &__logo img {
+		width: 13.2rem;
+		height: 4rem;
+		@include mobile-small {
+			width: 11.5rem;
+			height: 3.4rem;
+		}
+	}
 
     .copyright {
         @include text($ff, 400, 1.6rem, 3.8rem, $white07);
         letter-spacing: -0.500211px;
         @include mobile-small {
-            @include text($ff-second, 400, 1.8rem, 2.8rem, $white);
+            @include text($ff-second, 400, 1.6rem, 2.8rem, $white);
         }
     }
     &__nav {
         transform: translateX(4rem);
         flex-grow: 1;
-        @include tablet {
+        @include desktop-small {
             transform: translateX(0);
         }
     }
@@ -31,7 +39,7 @@
         display: flex;
         align-items: center;
         gap: 4rem;
-        @include tablet {
+        @include desktop-small {
             flex-direction: column;
             gap: 4rem;
         }
@@ -40,7 +48,7 @@
     &__li {
         &:first-child, &:last-of-type {
             margin-left: auto;
-            @include tablet {
+            @include desktop-small {
                 margin-left: 0;
             }
         }

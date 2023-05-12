@@ -12,7 +12,7 @@
     <link rel="stylesheet"  href="owl.carousel.css">
 	<link rel="stylesheet"  href="owl.theme.default.css">
 	<link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.webp" type="image/x-icon">
 	<title>Enver</title>
 </head>
 
@@ -22,16 +22,16 @@
     </div>
 	<header class="header container">
 		<a href="#" class="header__logo">
-            <img src="img/logo.png" alt="Logo">
+            <img src="img/logo.webp" alt="Logo">
         </a>
 		<nav class="nav">
 			<ul class="nav__ul" id="navUl">
 				<li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
-				<li class="nav__li"><a href="#" class="nav__a">Services</a></li>
-				<li class="nav__li"><a href="#" class="nav__a">Our Project</a></li>
-                <li class="nav__li"><a href="#" class="nav__a">About us</a></li>
+				<li class="nav__li"><a href="#service" class="nav__a">Services</a></li>
+				<li class="nav__li"><a href="#portfolio" class="nav__a">Our Project</a></li>
+                <li class="nav__li"><a href="#why" class="nav__a">About us</a></li>
                 <li class="nav__li"><a href="#" class="btn _primary">Contact us</a></li>
-				<span class="material-icons icon-close" onclick="navToggle()">close</span>
+				<li class="material-icons icon-close" onclick="navToggle()">close</li>
 			</ul>
             <div class="menu-icon" onclick="navToggle()">
                 <span></span>
@@ -40,46 +40,50 @@
             </div>
 		</nav>
 	</header>
-
     <div class="hero-section container">
         <div class="hero-section__info">
+            <div class="hero-section__blue"></div>
             <div class="hero-section__title">Build Your Awesome Platform</div>
             <div class="hero-section__desc">Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.</div>
             <div class="hero-section__btn">
-                <a href="#" class="btn _secondary">
+                <a href="#service" class="btn _secondary">
                     <span>Our Services</span>
                     <img src="img/arrow.svg" alt="Arrow">
                 </a>
             </div>
         </div>
         <div class="hero-section__img">
-            <img src="img/user.png" alt="User">
+            <img src="img/user.webp" alt="User">
+
+            <img class="hero-section__ui-zipper" src="img/UI/zipper.webp" alt="UI">
+            <img class="hero-section__ui-double" src="img/UI/doubleO.webp" alt="UI">
+            <img class="hero-section__ui-triangle" src="img/UI/triangle.webp" alt="UI">
+            <img class="hero-section__ui-plus" src="img/UI/plus.webp" alt="UI">
+            <div class="hero-section__yellow"></div>
         </div>
     </div>
-
-
-
-
-    <div class="why container">
+    <div class="why container" id="why">
         <div class="why__info">
             <div class="why__title">Why Enver Is The Best Choice?</div>
             <div class="why__desc" id="desc">Watch this one minute video so you understand why you should use our services!</div>
         </div>
         <a onclick="checkSpinner()" class="why__img">
-            <img src="img/video.png" alt="Video">
+            <img src="img/video.webp" alt="Video">
         </a>
     </div>
-
-
-
-    <div class="service container">
-        <div class="service__title">The Service We Provide For You</div>
+    <div class="service container" id="service">
+        <div class="service__title">The Service We Provide For You
+            <div class="service__light"></div>
+            <div class="service__light-s"></div>
+            <img class="service__triangle" src="img/UI/triangle.webp" alt="UI">
+            <img class="service__plus" src="img/UI/plus.webp" alt="UI">
+        </div>
         <div class="service__list" id="cards">
             <div class="service-item">
                 <div class="service-item__border"></div>
                 <div class="service-item__content">
                     <div class="service-item__icon _blue">
-                        <img src="img/code.svg" alt="Icon">
+                        <img src="img/service/code.svg" alt="Icon">
                     </div>
                     <div class="service-item__title">Development</div>
                     <div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
@@ -89,7 +93,7 @@
                 <div class="service-item__border"></div>
                 <div class="service-item__content">
                     <div class="service-item__icon _red">
-                        <img src="img/layer.svg" alt="Icon">
+                        <img src="img/service/layer.svg" alt="Icon">
                     </div>
                     <div class="service-item__title">UI/UX Designer</div>
                     <div class="service-item__desc">We provide UI/UX Design services, and of course with the best quality</div>
@@ -99,7 +103,7 @@
                 <div class="service-item__border"></div>
                 <div class="service-item__content">
                     <div class="service-item__icon _yellow">
-                        <img src="img/yellow.svg" alt="Icon">
+                        <img src="img/service/yellow.svg" alt="Icon">
                     </div>
                     <div class="service-item__title">Graphik Designer</div>
                     <div class="service-item__desc">We provide Graphic Design services, with the best designers</div>
@@ -109,7 +113,7 @@
                 <div class="service-item__border"></div>
                 <div class="service-item__content">
                     <div class="service-item__icon _yellow">
-                        <img src="img/align-vertically.svg" alt="Icon">
+                        <img src="img/service/align-vertically.svg" alt="Icon">
                     </div>
                     <div class="service-item__title">Motion Graphik</div>
                     <div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
@@ -119,7 +123,7 @@
                 <div class="service-item__border"></div>
                 <div class="service-item__content">
                     <div class="service-item__icon _blue">
-                        <img src="img/camera.svg" alt="Icon">
+                        <img src="img/service/camera.svg" alt="Icon">
                     </div>
                     <div class="service-item__title">Photography</div>
                     <div class="service-item__desc">We provide Photography services, and of course with the best quality</div>
@@ -129,7 +133,7 @@
                 <div class="service-item__border"></div>
                 <div class="service-item__content">
                     <div class="service-item__icon _red">
-                        <img src="img/video-play.svg" alt="Icon">
+                        <img src="img/service/video-play.svg" alt="Icon">
                     </div>
                     <div class="service-item__title">Videography</div>
                     <div class="service-item__desc">Create a platform with the best and coolest quality from us.</div>
@@ -137,46 +141,48 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="portfolio container">
-        <div class="portfolio__title">Our Awesome Portofolio</div>
+    <div class="portfolio container" id="portfolio">
+        <div class="portfolio__title">Our Awesome Portofolio
+            <div class="portfolio__light"></div>
+            <img class="portfolio__plus" src="img/UI/plus.webp" alt="UI">
+            <img class="portfolio__double" src="img/UI/doubleO.webp" alt="UI">
+        </div>
 		<div class="owl-carousel owl-theme portfolio__list">
             <div class="portfolio__item">
-                <img src="img/portfolio/item1.png" alt="Portfolio">
+                <img src="img/portfolio/item1.webp" alt="Portfolio">
             </div>
             <div class="portfolio__item">
-                <img src="img/portfolio/item2.png" alt="Portfolio">
+                <img src="img/portfolio/item2.webp" alt="Portfolio">
             </div>
             <div class="portfolio__item">
-                <img src="img/portfolio/item3.png" alt="Portfolio">
+                <img src="img/portfolio/item3.webp" alt="Portfolio">
             </div>
             <div class="portfolio__item">
-                <img src="img/portfolio/item1.png" alt="Portfolio">
+                <img src="img/portfolio/item1.webp" alt="Portfolio">
             </div>
             <div class="portfolio__item">
-                <img src="img/portfolio/item2.png" alt="Portfolio">
+                <img src="img/portfolio/item2.webp" alt="Portfolio">
             </div>
             <div class="portfolio__item">
-                <img src="img/portfolio/item3.png" alt="Portfolio">
+                <img src="img/portfolio/item3.webp" alt="Portfolio">
             </div>
         </div>
     </div>
-
     <div class="contact">
         <div class="container contact__container">
-            <div class="contact__text">Contact us for the service you want to use</div>
+            <div class="contact__text">Contact us for the service you want to use
+                <img class="contact__zipper" src="img/UI/zipper.webp" alt="UI">
+                <img class="contact__plus" src="img/UI/plus.webp" alt="UI">
+                <img class="contact__double" src="img/UI/doubleO.webp" alt="UI">
+            </div>
             <div class="contact__btn">
                 <a href="#" class="btn _contact">Contact us</a>
             </div>
         </div>
     </div>
-
-
 	<footer class="container footer">
-        <a href="#" class="header__logo">
-            <img src="img/logo.png" alt="Logo">
+        <a href="#" class="footer__logo">
+            <img src="img/logo.webp" alt="Logo">
         </a>
 		<nav class="footer__nav">
 			<ul class="footer__ul">

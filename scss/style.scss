@@ -1,11 +1,10 @@
 @import 'normalise';
-@import 'fonts';
 @import 'vars';
 @import 'mixins';
+@import 'fonts';
 @import 'base';
 
 
-@import 'blocks/spinner';
 @import 'blocks/header';
 @import 'blocks/hero';
 @import 'blocks/why';
@@ -13,3 +12,5 @@
 @import 'blocks/portfolio';
 @import 'blocks/contact';
 @import 'blocks/footer';
+
+@import 'blocks/spinner';

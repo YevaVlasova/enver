@@ -11,9 +11,39 @@
         gap: 5rem;
         margin-bottom: 14rem;
     }
+    &__btn a img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
 
 
     &__info {
+        position: relative;
+
+        & > .hero-section__blue {
+            position: absolute;
+            width: 46.7rem;
+            height: 123.379rem;
+            left: -12.2rem;
+            top: -43rem;
+
+            background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.1134) 100%);
+            filter: blur(150px);
+            border-radius: 233.5px;
+            transform: rotate(-54.37deg);
+            z-index: -3;
+            @include tablet {
+                left: -8rem;
+                top: -30rem;
+            }
+            @include mobile-small {
+                width: 25.237rem;
+                height: 66.674rem;
+                left: -1.6rem;
+                top: -14.4rem;
+                transform: rotate(-41.34deg);
+            }
+        }
     }
 
     &__title {
@@ -51,12 +81,99 @@
 
     &__img {
         flex-shrink: 0;
+        position: relative;
         img {
+            width: 100%;
+            height: auto;
             transform: translateX(8rem);
+            position: relative;
             @include tablet {
                 flex-shrink: 1;
                 max-width: 100%;
                 transform: translateX(0);
+            }
+        }
+        & > .hero-section__ui-zipper {
+            position: absolute;
+            max-width: 9.5rem;
+            left: -7.4rem;
+            top: 12.4rem;
+            @include tablet-small {
+                left: -4rem;
+                top: 8rem;
+            }
+            @include mobile {
+                left: -0.5rem;
+                top: 6rem;
+            }
+            @include mobile-small {
+                max-width: 6.1rem;
+                left: 0;
+                top: 4.7rem;
+            }
+        }
+        & > .hero-section__ui-double {
+            position: absolute;
+            max-width: 5.1rem;
+            right: 8rem;
+            top: 7.7rem;
+            @include mobile-small {
+                max-width: 3.57rem;
+                right: 1.6rem;
+                top: 2.3rem;
+            }
+        }
+        & > .hero-section__ui-triangle {
+            position: absolute;
+            max-width: 10.4rem;
+            left: -11.4rem;
+            bottom: 2rem;
+            @include tablet-small {
+                left: -5rem;
+                bottom: -0.8rem;
+            }
+            @include mobile {
+                left: -0.5rem;
+                bottom: -1.5rem;
+            }
+            @include mobile-small {
+                max-width: 6.544rem;
+                left: 0;
+                bottom: -3.656rem;
+            }
+        }
+        & > .hero-section__ui-plus {
+            position: absolute;
+            max-width: 5rem;
+            right: 8rem;
+            bottom: 6.1rem;
+            @include mobile-small {
+                max-width: 3.9rem;
+                right: 0.6rem;
+                bottom: 2.751rem;
+            }
+        }
+        & > .hero-section__yellow {
+            position: absolute;
+            width: 46.7rem;
+            height: 139.93rem;
+            left: 25.8rem;
+            top: -15.3rem;
+            background: linear-gradient(180deg, rgba(252, 160, 1, 0.107) 0%, rgba(224, 86, 136, 0.0615) 100%);
+            filter: blur(150px);
+            border-radius: 23.35rem;
+            transform: rotate(65.71deg);
+            z-index: -3;
+            @include tablet {
+                left: 15rem;
+            }
+            @include mobile-small {
+                width: 21.517rem;
+                height: 64.472rem;
+                left: 4.8rem;
+                top: -15.3rem;
+                background: linear-gradient(180deg, rgba(251, 168, 28, 0.26) 0%, rgba(224, 86, 136, 0.15) 100%);
+                transform: rotate(44.85deg);
             }
         }
     }

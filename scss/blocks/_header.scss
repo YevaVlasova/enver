@@ -78,7 +78,7 @@
 		}
 	}
 	&__li {
-		&:first-child, &:last-of-type {
+		&:first-child, &:nth-child(5) {
 			margin-left: auto;
 			@include tablet {
 				margin-left: initial;
@@ -92,7 +92,7 @@
 		transition: $transition;
 		&:hover {
 			color: $white;
-			font-weight: 600;
+			transform: scale(1.1);
 		}
 		&._active {
 			@include text($ff, 600, 1.8rem, 2.5rem, $primary);

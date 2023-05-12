@@ -10,6 +10,7 @@
   &__title {
     @include text($ff, 800, 5.8rem, 7.9rem, $white);
     margin-bottom: 7rem;
+    position: relative;
     @include mobile {
       padding: 2rem;
     }
@@ -19,17 +20,93 @@
       padding-left: 2.4rem;
       margin-bottom: 5rem;
     }
+    & > .portfolio__light {
+      position: absolute;
+      width: 59.958rem;
+      height: 65.285rem;
+      right: -34.4rem;
+      top: -19.7rem;
+
+      background: linear-gradient(180deg, rgba(84, 84, 212, 0.2) 0%, rgba(84, 84, 212, 0.084) 100%);
+      filter: blur(150px);
+      border-radius: 233.5px;
+      transform: matrix(-0.58, -0.81, -0.81, 0.58, 0, 0);
+      z-index: -3;
+      @include mobile-small {
+        display: none;
+    }
+    }
+    & > .portfolio__plus {
+      position: absolute;
+      max-width: 4.2rem;
+      left: -2.8rem;
+      top: -10.103rem;
+      transform: rotate(25.34deg);
+      @include desktop-small {
+        left: -1.7rem;
+        top: -8rem;
+      }
+      @include tablet {
+        left: -1rem;
+        top: -7rem;
+      }
+      @include tablet-small {
+        left: 1rem;
+        top: -6rem;
+      }
+      @include mobile {
+        left: 1.5rem;
+        top: -8rem;
+      }
+      @include mobile-small {
+        max-width: 2.8rem;
+        left: 2.4rem;
+        top: -12.3rem;
+        transform: rotate(0);
+      }
+    }
+    & > .portfolio__double {
+      position: absolute;
+      max-width: 6.2rem;
+      right: 4.141rem;
+      top: 3rem;
+      transform: rotate(-27.37deg);
+      @include desktop-small {
+        right: 3.5rem;
+        top: 3.5rem;
+      }
+      @include tablet {
+        right: 3rem;
+        top: 4rem;
+      }
+      @include mobile {
+        right: 2.6rem;
+        top: 4.8rem;
+      }
+      @include mobile-small {
+        max-width: 3.937rem;
+        right: 2.37rem;
+        top: 5.1rem;
+        transform: rotate(-20.89deg);
+      }
+    }
   }
   &__list {
+    overflow-y: hidden;
     * {
       transition: $transition;
     }
   }
 
   &__item {
+    overflow-y: hidden;
     background: $bgSwiper;
     border-radius: 1.4rem;
     padding: 2.4rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 .owl-item.active {
@@ -47,7 +124,7 @@
 }
 .owl-carousel .owl-stage-outer {
   overflow-x: hidden;
-  overflow-y: initial;
+  overflow-y: hidden;
   height: 41.7rem;
   @include tablet {
     height: auto;

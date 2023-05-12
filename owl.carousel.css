@@ -70,6 +70,10 @@
     border: none;
     padding: 0 !important;
     font: inherit; }
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next {
+    background: rgba(255, 255, 255, 0.2);
+  }
   .owl-carousel.owl-loaded {
     display: block; }
   .owl-carousel.owl-loading {
